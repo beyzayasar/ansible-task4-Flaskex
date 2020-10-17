@@ -1,0 +1,7 @@
+[web]
+web1c     ansible_host=3.84.8.71  ansible_user=centos
+web2u    ansible_host=54.89.54.98  ansible_user=ubuntu
+
+
+
+
