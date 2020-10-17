@@ -1,3 +1,4 @@
-el_version: epel-release
+repo_version: epel-release
 python_version: python3
+state_of_package: present
 

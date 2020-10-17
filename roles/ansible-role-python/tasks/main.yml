@@ -1,6 +1,6 @@
 - name: Install RH phyton36
   package:
-    name: "{{ el_version }}"
+    name: "{{ repo_version }}"
     state: present
     update_cache: yes
   when: ansible_os_family == 'RedHat'
@@ -8,7 +8,7 @@
 - name: install pkgs
   package:
     name: "{{ python_version }}"
-    state: present
+    state: "{{ state_of_package }}"
     update_cache: yes   
   when: ansible_os_family == 'RedHat'
    
@@ -18,7 +18,7 @@
     name: 
     - "{{ python_version }}"
     - python3-pip
-    state: present
+    state: "{{ state_of_package }}"
     force_apt_get: yes
     update_cache: yes
   when: ansible_os_family == 'Debian'
